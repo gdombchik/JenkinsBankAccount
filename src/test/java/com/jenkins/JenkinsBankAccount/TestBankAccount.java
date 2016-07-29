@@ -32,7 +32,7 @@ public class TestBankAccount {
 	@Test
 	public void phantomJSDriverTest(){
 		//File src = new File("/Users/gregorydombchik/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs");
-		File src = new File("/usr/local/share/phantomjs");
+		File src = new File("phantomjs");
 	    System.setProperty("phantomjs.binary.path", src.getAbsolutePath());
 	    WebDriver webdriver = new PhantomJSDriver();
 	    webdriver.navigate().to("http://www.thetestroom.com/webapp/");
