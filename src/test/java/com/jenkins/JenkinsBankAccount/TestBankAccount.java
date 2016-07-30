@@ -8,6 +8,8 @@ import java.io.File;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
+import PropertyManager.PropertyManager;
+
 public class TestBankAccount {
 
 	@Test
@@ -25,14 +27,11 @@ public class TestBankAccount {
 	}
 	
 	@Test
-	public void helloWorld(){
-		System.out.println("Hello World!!!!");
-	}
-	
-	@Test
 	public void phantomJSDriverTest(){
-		//File src = new File("/Users/gregorydombchik/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs");
-		File src = new File("/usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
+		PropertyManager propertyManager = new PropertyManager();
+		propertyManager.generateProperty();
+		File src = new File(propertyManager.getPhantomJSDriver());
+		//File src = new File("/usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
 	    System.setProperty("phantomjs.binary.path", src.getAbsolutePath());
 	    WebDriver webdriver = new PhantomJSDriver();
 	    webdriver.navigate().to("http://www.thetestroom.com/webapp/");
