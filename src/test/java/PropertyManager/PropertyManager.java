@@ -14,9 +14,9 @@ public class PropertyManager {
 		
 		try {
 			input = getClass().getResourceAsStream("/com/jenkins/JenkinsBankAccount/parameters.properties");
-			prop.load(input);
+			//prop.load(input);
 			
-			setPhantomJSDriver(prop.get("phantomJSDriver").toString());
+			//setPhantomJSDriver(prop.get("phantomJSDriver").toString());
 		}catch(IOException e){
 			e.printStackTrace();
 		}
