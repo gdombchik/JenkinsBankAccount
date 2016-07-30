@@ -13,7 +13,7 @@ public class PropertyManager {
 		InputStream input = null;
 		
 		try {
-			input = this.getClass().getResourceAsStream("/com/jenkins/JenkinsBankAccount/parameters.properties");
+			input = getClass().getClassLoader().getResourceAsStream("com/jenkins/JenkinsBankAccount/parameters.properties");
 			prop.load(input);
 			
 			setPhantomJSDriver(prop.get("phantomJSDriver").toString());
