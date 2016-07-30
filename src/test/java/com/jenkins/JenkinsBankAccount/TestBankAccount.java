@@ -30,8 +30,8 @@ public class TestBankAccount {
 	public void phantomJSDriverTest(){
 		PropertyManager propertyManager = new PropertyManager();
 		propertyManager.generateProperty();
-		File src = new File(propertyManager.getPhantomJSDriver());
-		//File src = new File("/usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
+		//File src = new File(propertyManager.getPhantomJSDriver());
+		File src = new File("/usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
 	    System.setProperty("phantomjs.binary.path", src.getAbsolutePath());
 	    WebDriver webdriver = new PhantomJSDriver();
 	    webdriver.navigate().to("http://www.thetestroom.com/webapp/");
