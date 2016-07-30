@@ -28,8 +28,8 @@ public class TestBankAccount {
 	
 	@Test
 	public void phantomJSDriverTest(){
-		PropertyManager propertyManager = new PropertyManager();
-		propertyManager.generateProperty();
+		//PropertyManager propertyManager = new PropertyManager();
+		//propertyManager.generateProperty();
 		//File src = new File(propertyManager.getPhantomJSDriver());
 		File src = new File("/usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
 	    System.setProperty("phantomjs.binary.path", src.getAbsolutePath());
