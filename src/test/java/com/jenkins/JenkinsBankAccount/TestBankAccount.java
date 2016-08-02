@@ -8,7 +8,7 @@ import java.io.File;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
-import PropertyManager.PropertyManager;
+import com.jenkins.PropertyManager.PropertyManager;
 
 public class TestBankAccount {
 

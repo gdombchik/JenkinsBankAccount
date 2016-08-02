@@ -1,4 +1,4 @@
-package PropertyManager;
+package com.jenkins.PropertyManager;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,7 +13,7 @@ public class PropertyManager {
 		InputStream input = null;
 		
 		try {
-			input = getClass().getClassLoader().getResourceAsStream("com/jenkins/JenkinsBankAccount/parameters.properties");
+			input = this.getClass().getClassLoader().getResourceAsStream("com/jenkins/PropertyManager/parameters.properties");
 			prop.load(input);
 			
 			setPhantomJSDriver(prop.get("phantomJSDriver").toString());
